@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Szlaki turystyczne i ścieżki rowerowe w województwie łódzkim</title>
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<header>
+
+		<nav class="navbar" role="navigation" aria-label="menu">
+
+			<a class="logo" href="#">Rowerem <strong>Łódzkie</strong></a>
+
+			<ul class="menu">
+				<li><a href="">Główna</a></li>
+				<li><a href="#map-section">Mapa</a></li>
+				<li class="dropdown">
+					<a href="#">
+						Szlaki
+						<!--SVG dropdown icon-->
+						<svg class="icon" width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+							<path
+								d="M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z" />
+						</svg>
+					</a>
+					<!--Start of Dropdown-->
+					<ul class="dropdown-nav">
+						<li><a href="">Lawn Care</a></li>
+						<li><a href="">Walling &amp; Fencing</a></li>
+						<li><a href="">Landscape design</a></li>
+						<li><a href="">Grounds Maintenance</a></li>
+					</ul>
+				</li>
+				<li><a href="#contact">Contact us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="home" class="banner">
+			<div>
+				Szlaki rowerowe województwa<br>łódzkiego
+			</div>
+		</section>
+
+		<section id="map-section" class='map'>
+			<h2>Szlaki rowerowe woj. łódzkiego</h2>
+			<h6>EKSPLORUJ CENTRUM POLSKI NA DWÓCH KÓŁKACH</h6>
+			<p>Województwo łódzkie leży w samym centrum Polski. Na jego terenie od wieków krzyżowały się szlaki komunikacyjne,
+				biegnące z północy na południe i z zachodu na wschód. Najlepszym odzwierciedleniem tej historycznej prawdy jest
+				powstające w Łódzkiem skrzyżowanie dwóch wielkich autostrad transeuropejskich. Ale przez całe tysiąclecia
+				wędrowali tędy kupcy, osadnicy, zakonnicy, zdobywcy. Wszyscy pozostawiali po sobie ślady w postaci grodów, osad,
+				cmentarzy, później zaś budowli: klasztorów, kościołów, zamków, pałaców. Te pamiątki przeszłości są dziś
+				wspaniałymi zabytkami, godnie świadczącymi o wielkim znaczeniu regionu dla całego kraju. Dlatego wytyczono
+				cztery europejskie szlaki kulturowe: cysterski, romański, Kolei Warszawsko-Wiedeńskiej i bursztynowy. Wędrując
+				po nich można poznać najcenniejsze walory województwa od architektonicznych po przyrodnicze i poczuć tchnienie
+				Historii. Tej najnowszej i najdawniejszej, sięgającej początków państwa polskiego, kiedy to w wędrówkach nad
+				Bałtyk kupcy znad Morza Śródziemnego odwiedzali po drodze słowiańskie osady nad Wartą i Bzurą.</p>
+
+			<div id="map"></div>
+		</section>
+
+		<section id="trails">
+			<h2>Szlaki turystyczne i ścieżki rowerowe</h2>
+			<div class="trail-item">
+				<img src="trail1.jpg" alt="Szlak 1">
+				<p>Opis szlaku 1...</p>
+			</div>
+			<div class="trail-item">
+				<img src="trail2.jpg" alt="Szlak 2">
+				<p>Opis szlaku 2...</p>
+			</div>
+		</section>
+
+		<section id="map">
+			<h2>Mapa regionu</h2>
+			<img src="map.jpg" alt="Mapa Łódzkie">
+		</section>
+
+		<section id="gallery">
+			<h2>Galeria</h2>
+			<div class="gallery-item">
+				<img src="gallery1.jpg" alt="Galeria 1">
+			</div>
+			<div class="gallery-item">
+				<img src="gallery2.jpg" alt="Galeria 2">
+			</div>
+		</section>
+
+		<section id="videos">
+			<h2>Filmy i Animacje</h2>
+			<video controls>
+				<source src="promo.mp4" type="video/mp4">
+				Twoja przeglądarka nie obsługuje tagu wideo.
+			</video>
+		</section>
+	</main>
+
+	<footer>
+		<div class="contact" id='contact'>
+			<h3>Kontakt</h3>
+			<p>Email: info@lodzkie.tourism.pl</p>
+			<p>Telefon: 123-456-789</p>
+		</div>
+		<div class="social-media">
+			<a href="#">Facebook</a>
+			<a href="#">Twitter</a>
+			<a href="#">Instagram</a>
+		</div>
+		<div class="footer-info">
+			<p>&copy; 2024 Turystyka Łódzkie. Wszelkie prawa zastrzeżone.</p>
+		</div>
+	</footer>
+
+	<script src='./js/map.js'></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXbZqBZRD4wrLDOehGdQxIZn0zt7VyamE&callback=initMap&v=weekly"
+		defer></script>
+</body>
+
+</html>
