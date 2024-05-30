@@ -62,24 +62,15 @@
 				Historii. Tej najnowszej i najdawniejszej, sięgającej początków państwa polskiego, kiedy to w wędrówkach nad
 				Bałtyk kupcy znad Morza Śródziemnego odwiedzali po drodze słowiańskie osady nad Wartą i Bzurą.</p>
 
-			<div id="map"></div>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m54!1m12!1m3!1d631221.267646057!2d18.530168099265005!3d51.82976299680845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m39!3e1!4m3!3m2!1d51.4869522!2d20.1111449!4m3!3m2!1d51.760441699999994!2d18.137227499999998!4m3!3m2!1d51.9216899!2d19.625544599999998!4m3!3m2!1d51.6998052!2d19.3288655!4m3!3m2!1d51.763523799999994!2d19.635114899999998!4m3!3m2!1d51.522999!2d18.6852631!4m3!3m2!1d51.7738881!2d20.2021549!4m3!3m2!1d52.2422172!2d20.2428287!4m5!1s0x471a88240c5aae95%3A0xde8ec42f0f57461a!2zWsWCb2N6ZXc!3m2!1d51.4171963!2d18.603559399999998!5e0!3m2!1spl!2spl!4v1717076964052!5m2!1spl!2spl"
+				width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</section>
 
-		<section id="trails">
-			<h2>Szlaki turystyczne i ścieżki rowerowe</h2>
-			<div class="trail-item">
-				<img src="trail1.jpg" alt="Szlak 1">
-				<p>Opis szlaku 1...</p>
-			</div>
-			<div class="trail-item">
-				<img src="trail2.jpg" alt="Szlak 2">
-				<p>Opis szlaku 2...</p>
-			</div>
-		</section>
-
-		<section id="map">
-			<h2>Mapa regionu</h2>
-			<img src="map.jpg" alt="Mapa Łódzkie">
+		<section id="trails" class='trails'>
+			<h2>Wybrane szlaki rowerowe woj. łódzkiego</h2>
+			<div class='trails_container'></div>
 		</section>
 
 		<section id="gallery">
@@ -117,11 +108,7 @@
 		</div>
 	</footer>
 
-	<script src='./js/map.js'></script>
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXbZqBZRD4wrLDOehGdQxIZn0zt7VyamE&callback=initMap&v=weekly"
-		defer></script>
+	<script src='./js/trails.js'></script>
 </body>
 
 </html>
