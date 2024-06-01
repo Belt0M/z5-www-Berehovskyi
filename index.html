@@ -4,9 +4,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Szlaki turystyczne i ścieżki rowerowe w województwie łódzkim</title>
+	<title>Rowerem łódzkie</title>
 	<link rel="stylesheet" href="./css/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,14 +26,15 @@
 
 		<nav class="navbar" role="navigation" aria-label="menu">
 
-			<a class="logo" href="#">Rowerem <strong>Łódzkie</strong></a>
+			<a class="logo" href="/">Rowerem <strong>Łódzkie</strong></a>
 
 			<ul class="menu">
-				<li><a href="">Główna</a></li>
+				<li><a href="/">Główna</a></li>
 				<li><a href="#map-section">Mapa</a></li>
-				<li class="dropdown">
-					<a href="#">
-						Szlaki
+				<li><a href="#trails">Szlaki</a></li>
+				<li><a href="#gallery">Galeria</a></li>
+				<li><a href="#videos">Filmiki</a></li>
+				<li class="dropdown"><a href="#contact">Contact us
 						<!--SVG dropdown icon-->
 						<svg class="icon" width="14" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
 							<path
@@ -30,13 +43,11 @@
 					</a>
 					<!--Start of Dropdown-->
 					<ul class="dropdown-nav">
-						<li><a href="">Lawn Care</a></li>
-						<li><a href="">Walling &amp; Fencing</a></li>
-						<li><a href="">Landscape design</a></li>
-						<li><a href="">Grounds Maintenance</a></li>
+						<li><a href="https://www.facebook.com/" target='_blank'>Facebook</a></li>
+						<li><a href="https://www.meta.com/pl/" target='_blank'>Twitter</a></li>
+						<li><a href="https://www.instagram.com/" target='_blank'>Instagram</a></li>
 					</ul>
 				</li>
-				<li><a href="#contact">Contact us</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -70,6 +81,7 @@
 
 		<section id="trails" class='trails'>
 			<h2>Wybrane szlaki rowerowe woj. łódzkiego</h2>
+			<h6>Kliknij żeby obejrzeć informację o szlaku</h6>
 			<div class='trails_container'></div>
 		</section>
 
@@ -77,22 +89,172 @@
 			<div class="content"></div>
 		</aside>
 
-		<section id="gallery">
+		<section class="gallery" id='gallery'>
 			<h2>Galeria</h2>
-			<div class="gallery-item">
-				<img src="gallery1.jpg" alt="Galeria 1">
-			</div>
-			<div class="gallery-item">
-				<img src="gallery2.jpg" alt="Galeria 2">
+			<h6>Widoki na szlakach</h6>
+			<div class="container">
+				<a href="https://lodz.travel/files/public/_processed_/e/d/csm_Piotrkowska_noca_6111219ee1.jpg">
+					<img src="https://lodz.travel/files/public/_processed_/e/d/csm_Piotrkowska_noca_6111219ee1.jpg" />
+				</a>
+
+				<a href="https://polen.miceboard.com/wp-content/uploads/2023/08/Bildschirmfoto-2023-08-09-um-09.59.24.png"
+					class="vertical">
+					<img src="https://polen.miceboard.com/wp-content/uploads/2023/08/Bildschirmfoto-2023-08-09-um-09.59.24.png" />
+				</a>
+
+				<a href="https://www.polska.travel/wp-content/uploads/2022/12/lodz_manufaktura_1170-1.jpg" class="horizontal">
+					<img src="https://www.polska.travel/wp-content/uploads/2022/12/lodz_manufaktura_1170-1.jpg" />
+				</a>
+
+				<a
+					href="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-wi%C4%85czy%C5%84-3-1024x768.jpg">
+					<img
+						src="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-wi%C4%85czy%C5%84-3-1024x768.jpg" />
+				</a>
+
+				<a
+					href="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNTk3NTE1NjcvMDMyYWY1MWVhOGYxZTU4ZDNmOWNiZGFmNTNhM2M3MTcuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjo1MDAsImhlaWdodCI6NTAwLCJmaXQiOiJpbnNpZGUifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0=">
+					<img
+						src="https://images.alltrails.com/eyJidWNrZXQiOiJhc3NldHMuYWxsdHJhaWxzLmNvbSIsImtleSI6InVwbG9hZHMvcGhvdG8vaW1hZ2UvNTk3NTE1NjcvMDMyYWY1MWVhOGYxZTU4ZDNmOWNiZGFmNTNhM2M3MTcuanBnIiwiZWRpdHMiOnsidG9Gb3JtYXQiOiJ3ZWJwIiwicmVzaXplIjp7IndpZHRoIjo1MDAsImhlaWdodCI6NTAwLCJmaXQiOiJpbnNpZGUifSwicm90YXRlIjpudWxsLCJqcGVnIjp7InRyZWxsaXNRdWFudGlzYXRpb24iOnRydWUsIm92ZXJzaG9vdERlcmluZ2luZyI6dHJ1ZSwib3B0aW1pc2VTY2FucyI6dHJ1ZSwicXVhbnRpc2F0aW9uVGFibGUiOjN9fX0=" />
+				</a>
+
+				<a href="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-ma%C5%82ecz-3-1024x768.jpg"
+					class="big">
+					<img
+						src="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-ma%C5%82ecz-3-1024x768.jpg" />
+				</a>
+
+				<a
+					href="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-wi%C4%85czy%C5%84-3-1024x768.jpg">
+					<img
+						src="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-wi%C4%85czy%C5%84-3-1024x768.jpg" />
+				</a>
+
+				<a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEDUcFKUTw3QRiTjUVMIss-tRP6t4Azq3t5g&s"
+					class="vertical">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEDUcFKUTw3QRiTjUVMIss-tRP6t4Azq3t5g&s" />
+				</a>
+
+				<a
+					href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbnxs0wPw1NT_epthjKObQ7Jy7QreeTlG5nlza33BDVlAJvSkVtuXVKxVvwLJu2-fo4oo&usqp=CAU">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbnxs0wPw1NT_epthjKObQ7Jy7QreeTlG5nlza33BDVlAJvSkVtuXVKxVvwLJu2-fo4oo&usqp=CAU" />
+				</a>
+
+				<a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1GkmKv5CBmga4Vp18Pfh3RI8I87DhcNEtMv2r_lhW1VhsYukTMIEEmLpbezLdGU9PNOI&usqp=CAU"
+					class="horizontal">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1GkmKv5CBmga4Vp18Pfh3RI8I87DhcNEtMv2r_lhW1VhsYukTMIEEmLpbezLdGU9PNOI&usqp=CAU" />
+				</a>
+
+				<a
+					href="https://www.dziswlodzi.pl/pub/thumbs/img-pub-uploads-miejsca-lodz-stare-polesie-park-poniatowskiegojpg-400-300-crop.jpg">
+					<img
+						src="https://www.dziswlodzi.pl/pub/thumbs/img-pub-uploads-miejsca-lodz-stare-polesie-park-poniatowskiegojpg-400-300-crop.jpg" />
+				</a>
+
+				<a href="https://www.dziswlodzi.pl/pub/thumbs/img-pub-uploads-miejsca-brzeziny-arboretum-sggwjpg-400-300-crop.jpg"
+					class="big">
+					<img
+						src="https://www.dziswlodzi.pl/pub/thumbs/img-pub-uploads-miejsca-brzeziny-arboretum-sggwjpg-400-300-crop.jpg" />
+				</a>
+
+				<a href="https://voyagerka.com/wp-content/uploads/2020/11/B366480A-E6B1-4270-83F7-A5FDDBA351D9.jpeg">
+					<img src="https://voyagerka.com/wp-content/uploads/2020/11/B366480A-E6B1-4270-83F7-A5FDDBA351D9.jpeg" />
+				</a>
+
+				<a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzIx5EvlZySvbVxn1hetO3lOO32gxIFlzPNw&s"
+					class="horizontal">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzIx5EvlZySvbVxn1hetO3lOO32gxIFlzPNw&s" />
+				</a>
+
+				<a
+					href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1yksYIjhOK-g8i9aidH-gEqQH766XeEW7UphQEQOnKxj1Z3Pa8l5MCwvIctU7C_Pj6HU&usqp=CAU">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1yksYIjhOK-g8i9aidH-gEqQH766XeEW7UphQEQOnKxj1Z3Pa8l5MCwvIctU7C_Pj6HU&usqp=CAU" />
+				</a>
+
+				<a href="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-wi%C4%85czy%C5%84.jpg"
+					class="big">
+					<img
+						src="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-wi%C4%85czy%C5%84.jpg" />
+				</a>
+
+				<a
+					href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Rezerwat_przyrody_Bukowiec_%28wojew%C3%B3dztwo_%C5%82%C3%B3dzkie%29_03.jpg/1200px-Rezerwat_przyrody_Bukowiec_%28wojew%C3%B3dztwo_%C5%82%C3%B3dzkie%29_03.jpg">
+					<img
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Rezerwat_przyrody_Bukowiec_%28wojew%C3%B3dztwo_%C5%82%C3%B3dzkie%29_03.jpg/1200px-Rezerwat_przyrody_Bukowiec_%28wojew%C3%B3dztwo_%C5%82%C3%B3dzkie%29_03.jpg" />
+				</a>
+
+				<a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-5mABTNGKJSADwe4uVGKAdGKXjLbIFwIfE_zbtx7viPSyVX_6bj9jqqcGVDdtHSVELy8&usqp=CAU"
+					class="horizontal">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-5mABTNGKJSADwe4uVGKAdGKXjLbIFwIfE_zbtx7viPSyVX_6bj9jqqcGVDdtHSVELy8&usqp=CAU" />
+				</a>
+
+				<a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiwmZK9vBLRh_vRPnKES34kzvQ7_Ftz_rLLsEeGTLnQ5upd_wixlNqGMEnpTJVy7rQxC0&usqp=CAU"
+					class="horizontal">
+					<img
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiwmZK9vBLRh_vRPnKES34kzvQ7_Ftz_rLLsEeGTLnQ5upd_wixlNqGMEnpTJVy7rQxC0&usqp=CAU" />
+				</a>
+
+				<a href="https://www.dziswlodzi.pl/pub/thumbs/img-pub-uploads-miejsca-lodz-stary-widzew-park-zrodliskajpg-400-300-crop.jpg"
+					class="horizontal">
+					<img
+						src="https://www.dziswlodzi.pl/pub/thumbs/img-pub-uploads-miejsca-lodz-stary-widzew-park-zrodliskajpg-400-300-crop.jpg" />
+				</a>
+
+				<a
+					href="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-niebieskie-%C5%BAr%C3%B3d%C5%82a-4-1024x576.jpg">
+					<img
+						src="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-niebieskie-%C5%BAr%C3%B3d%C5%82a-4-1024x576.jpg" />
+				</a>
+
+				<a href="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-niebieskie-%C5%BAr%C3%B3d%C5%82a-2.jpg"
+					class="horizontal">
+					<img
+						src="https://www.napokladziezycia.pl/wp-content/uploads/2020/06/%C5%82%C3%B3dzkie-rezerwaty-przyrody-niedaleko-%C5%82odzi-niebieskie-%C5%BAr%C3%B3d%C5%82a-2.jpg" />
+				</a>
+
 			</div>
 		</section>
+		<section id="videos" class='videos'>
+			<h2>Filmiki</h2>
+			<h6>Obejrz sobie filmiki z przedstawionych szlaków</h6>
+			<swiper-container class="mySwiper" navigation="true" slides-per-view="1" centered-slides="true"
+				space-between="30">
+				<swiper-slide>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/tMyf_gfy5XI?si=ACHhRPWDj-y8yiO_"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</swiper-slide>
+				<swiper-slide>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/BO1CNjRppIA?si=YGePIlBCnrOtRUbN"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</swiper-slide>
+				<swiper-slide>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/n4C2MO-4Qns?si=n1_LlZJXJl5MQXOl"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</swiper-slide>
+				<swiper-slide>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/s3edCwnvKHc?si=n2obzwJQBqn19RIx"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</swiper-slide>
+				<swiper-slide>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/TJZIDvc960o?si=BFduPCDfL3vXf7VZ"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</swiper-slide>
 
-		<section id="videos">
-			<h2>Filmy i Animacje</h2>
-			<video controls>
-				<source src="promo.mp4" type="video/mp4">
-				Twoja przeglądarka nie obsługuje tagu wideo.
-			</video>
+			</swiper-container>
 		</section>
 	</main>
 
@@ -103,16 +265,17 @@
 			<p>Telefon: 123-456-789</p>
 		</div>
 		<div class="social-media">
-			<a href="#">Facebook</a>
-			<a href="#">Twitter</a>
-			<a href="#">Instagram</a>
+			<a href="https://www.facebook.com/">Facebook</a>
+			<a href="https://www.meta.com/pl/">Twitter</a>
+			<a href="https://www.instagram.com/">Instagram</a>
 		</div>
 		<div class="footer-info">
-			<p>&copy; 2024 Turystyka Łódzkie. Wszelkie prawa zastrzeżone.</p>
+			<p>&copy; 2024 Rowerem łódzkie. Wszelkie prawa zastrzeżone.</p>
 		</div>
 	</footer>
 
 	<script src='./js/trails.js'></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 </body>
 
 </html>
